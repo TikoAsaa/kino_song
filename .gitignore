@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+kino_song/kino_song_app/migrations/
 # C extensions
 *.so
 
