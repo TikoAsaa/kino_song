@@ -1,0 +1,7 @@
+<h1>MOVIES</h1>
+
+<ul>
+{% for s in my_movies %}
+    <li><h3><i>Movies</i> {{s.movie_name}} {{s.movie_artist}}</h3> <i>Data</i> {{s.movie_data}} <i>Views</i> {{s.movie_views}}</li>
+{% endfor %}
+</ul>
