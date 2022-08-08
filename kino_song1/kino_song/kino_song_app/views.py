@@ -28,3 +28,12 @@ def movies(request):
         'my_movies': movie,
     }
     return HttpResponse(template.render(context, request))
+
+
+def update(request, id):
+    song = Songs.objects.get(id=id)
+    template = loader.get_template('song_info.html')
+    context = {
+        'my_song': song,
+    }
+    return HttpResponse(template.render(context, request))
