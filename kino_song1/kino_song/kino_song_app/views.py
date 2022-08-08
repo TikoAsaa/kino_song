@@ -30,7 +30,7 @@ def movies(request):
     return HttpResponse(template.render(context, request))
 
 
-def update(request, id):
+def song_info(request, id):
     song = Songs.objects.get(id=id)
     template = loader.get_template('song_info.html')
     context = {
