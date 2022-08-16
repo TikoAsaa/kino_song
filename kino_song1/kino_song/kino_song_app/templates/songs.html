@@ -1,12 +1,8 @@
 <h1>SONGS</h1>
 
-<table border="1">
+<ul>
 {% for s in my_songs %}
-<tr>
-<td><a href="song_info/{{ s.id }}">{{ s.id }}</a></td>
-<td>{{ s.song_name }}</td>
-<td>{{ s.song_artist }}</td>
-</tr>
+    <li><h3><a href="song_info/{{ s.id }}">{{ s.id }} {{s.song_name}} {{s.song_artist}}</a></h3></li>
 {% endfor %}
-</table>
+</ul>
 

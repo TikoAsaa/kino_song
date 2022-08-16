@@ -2,6 +2,6 @@
 
 <ul>
 {% for s in my_movies %}
-    <li><h3> {{s.movie_name}} {{s.movie_artist}}</h3> <i>Data</i> {{s.movie_data}} <i>Views</i> {{s.movie_views}}</li>
+    <li><h3><a href="movie_info/{{ s.id }}">{{ s.id }} {{s.movie_name}} {{s.movie_artist}}</a></h3></li>
 {% endfor %}
 </ul>

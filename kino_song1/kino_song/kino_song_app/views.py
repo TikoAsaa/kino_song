@@ -36,4 +36,27 @@ def song_info(request, id):
     context = {
         'my_song': song,
     }
+    s = Songs.objects.get(id=id)
+    s.song_views += 1
+    s.save()
     return HttpResponse(template.render(context, request))
+
+
+def movie_info(request, id):
+    movie = Movies.objects.get(id=id)
+    template = loader.get_template('movie_info.html')
+    context = {
+        'my_movie': movie,
+    }
+    m = Movies.objects.get(id=id)
+    m.movie_views += 1
+    m.save()
+    return HttpResponse(template.render(context, request))
+
+
+def add_view(request):
+    v = Songs.song_views.objects.get(id=1)
+
+    v.count += 1
+    v.save()
+    return render(request, 'song_info/{{ s.id }}')
